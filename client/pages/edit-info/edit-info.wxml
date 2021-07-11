@@ -1,0 +1,76 @@
+<view class="container">
+  <!-- content -->
+  <form bindsubmit="formSubmit" bindreset="formReset" class='form-info'>
+    <view class='item info-name'>
+      <text>企业名称：</text>
+      <input placeholder="请输入企业名称" placeholder-class='input-place' value='{{ com_name }}' name="com_name" />
+    </view>
+    <view class='item f-size'>
+      <text>主营业务：</text>
+      <input placeholder="请输入主营业务" placeholder-class='input-place' name="bt_name" />
+    </view>
+    <view class='item'>
+      <text>联系人：</text>
+      <input placeholder="请输入联系人姓名" placeholder-class='input-place' value='{{ real_name }}' type="number" name="real_name" />
+    </view>
+    <view class='item'>
+      <text>联系电话：</text>
+      <input placeholder="请输入电话" placeholder-class='input-place' type="number" value='{{ phone }}' name="phone" />
+    </view>
+    <view class='item'>
+      <text>企业地址:</text>
+      <picker mode="region" bindchange="bindRegionChange" value="{{region}}">
+        <view class='picker'> 
+          <text>{{region[0]}}</text>
+          <text>{{region[1]}}</text>
+          <text>{{region[2]}}</text>
+        </view>
+      </picker>
+    </view>
+    <view class='item'>
+      <text>详细地址：</text>
+      <input placeholder="请输入详细地址" placeholder-class='input-place' value='{{detail_address}}' type="number" name="detail_address" />
+    </view>
+    <view class='item brief'>
+      <text>企业简介：</text>
+      <view>
+        <textarea bindblur="bindTextAreaBlur" placeholder-class='input-place' maxlength='1000' value='{{ com_info }}' placeholder="请输入供应商品的描述信息" name="com_info" />
+      </view>
+    </view>
+    <view class='item aptitude'>
+      <text>资质信息：</text>
+      <view class='imgs'>
+        <block wx:for='{{aptitudeArr}}' wx:key='*this'>
+          <view class='img-con'>
+            <image src='{{item}}' class="img" />
+            <image class='delect' src='./icon/icon-delect.png' data-item='{{index}}'  wx:if="{{aptState}}" bindtap='delectAptImg' />
+          </view>
+        </block>
+        <view class="add-img img" bindtap='uploadAptImg' wx:if="{{aptitudeArr.length<2}}">
+          <text>+</text>
+        </view>
+        <view>
+          <button class='approve' type="primary" size="mini" wx:if="{{aptState}}" bindtap='uploadApt' plain="false">认证</button>
+        </view>
+      </view>
+    </view>
+    <view class='item figure'>
+      <text>形象图：</text>
+      <view class='imgs'>
+        <block wx:for='{{figureArr}}' wx:key='*this'>
+         <view class='img-con'>
+          <image src='{{item}}' class='img' />
+          <image class='delect' src='./icon/icon-delect.png' data-id="{{index}}" bindtap='delectFigImg' />
+          </view>
+        </block>
+        <view class="add-img img" bindtap='uploadFigImg'  wx:if="{{figureArr.length<8}}">
+          <text>+</text>
+        </view>
+      </view>
+    </view>
+    <view class='button'>
+      <button type="primary" size="default" form-type="submit"> 保存 </button>
+    </view>
+  </form>
+  <!-- end -->
+</view>

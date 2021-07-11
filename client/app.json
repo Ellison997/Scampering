@@ -1,0 +1,74 @@
+{
+    "pages": [
+        "pages/instantly/index",
+        "pages/my/my",
+        "pages/publish/publish",
+        "pages/supply/supply",
+        "pages/publish-supply/publish-supply",
+        "pages/publish-details/publish-details",
+        "pages/product/product",
+        "pages/info-manage/info-manage",
+        "pages/enterprise-details/enterprise-details",
+        "pages/position/position",
+        "pages/edit-info/edit-info",
+        "pages/task/task",
+        "pages/history/history",
+        "pages/setting/setting",
+        "pages/tomato/tomato"
+    ],
+    "window": {
+        "backgroundColor": "#F6F6F6",
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#F6F6F6",
+        "navigationBarTitleText": "蹦跶",
+        "navigationBarTextStyle": "black"
+    },
+    "debug": true,
+    "plugins": {},
+    "tabBar": {
+        "selectedColor": "#3197ed",
+        "list": [{
+                "pagePath": "pages/instantly/index",
+                "text": "即刻",
+                "iconPath": "/asset/tab_icon/instantly.png",
+                "selectedIconPath": "/asset/tab_icon/instantly_activity.png"
+            },
+            {
+                "pagePath": "pages/tomato/tomato",
+                "text": "番茄钟",
+                "iconPath": "/asset/tab_icon/tomato.png",
+                "selectedIconPath": "/asset/tab_icon/tomato_activity.png"
+            },
+            {
+                "pagePath": "pages/history/history",
+                "text": "历史",
+                "iconPath": "/asset/tab_icon/history.png",
+                "selectedIconPath": "/asset/tab_icon/history_activity.png"
+            },
+            {
+                "pagePath": "pages/my/my",
+                "text": "我的",
+                "iconPath": "/asset/tab_icon/user.png",
+                "selectedIconPath": "/asset/tab_icon/user_activity.png"
+            }
+        ]
+    },
+    "permission": {
+        "scope.userLocation": {
+            "desc": "你的位置信息将用于小程序位置接口的效果展示"
+        }
+    },
+    "usingComponents": {
+        "van-button": "@vant/weapp/button",
+        "van-icon": "@vant/weapp/icon",
+        "van-cell": "@vant/weapp/cell",
+        "van-cell-group": "@vant/weapp/cell-group",
+        "van-tab": "@vant/weapp/tab",
+        "van-tabs": "@vant/weapp/tabs",
+        "van-panel": "@vant/weapp/panel",
+        "van-grid": "@vant/weapp/grid",
+        "van-grid-item": "@vant/weapp/grid-item",
+        "van-dialog": "@vant/weapp/dialog"
+    },
+    "sitemapLocation": "sitemap.json"
+}

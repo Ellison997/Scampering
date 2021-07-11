@@ -1,0 +1,18 @@
+<!--pages/product/product.wxml-->
+<!-- content -->
+<view class='product'>
+    <text>名称</text>
+    <text>数量</text>
+    <text>规格</text>
+    <text>单位</text>
+    <text>是否在售</text>
+</view>
+<scroll-view scroll-y style='height:100%;'>
+    <view class='product detail' wx:for='{{product}}'>
+        <text>{{item.name}}</text>
+        <text>{{item.num}}</text>
+        <text>{{item.gui}}</text>
+        <text>{{item.unit}}</text>
+        <text>{{item.isTrue == 1?'是':'否'}}</text>
+    </view>
+</scroll-view>

@@ -1,0 +1,117 @@
+.form-info {
+  margin: 10rpx 40rpx;
+  margin-top: 20rpx;
+}
+
+.item {
+  display: flex;
+  min-height: 74rpx;
+  margin-top: 10rpx;
+}
+
+.item>text {
+  display: inline-block;
+  width: 180rpx;
+  min-width: 100rpx;
+  text-align: left;
+}
+
+.item>input {
+  display: inline-block;
+  border-bottom: 1px solid #ddd;
+  width: 82%;
+}
+
+.brief, .aptitude,.figure {
+  display: block;
+}
+
+.brief>view {
+  margin: 8rpx;
+  border: 1rpx solid #ddd;
+  padding: 20rpx;
+  border-radius: 20rpx;
+}
+.brief textarea{
+  width: 100%;
+}
+
+.detail>textarea {
+  height: 160rpx;
+  width: 80%;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 10rpx;
+}
+
+.imgs {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.img {
+  position: relative;
+  width: 130rpx;
+  height: 130rpx;
+  margin: 6rpx;
+}
+
+.add-img {
+  font-size: 50pt;
+  color: #ddd;
+  border: 1px dashed #ddd;
+  line-height: 110rpx;
+  text-align: center;
+  display: inline-block;
+}
+
+.button {
+  margin-top: 40rpx;
+  margin-bottom: 160rpx;
+}
+
+.local>.local_text {
+  flex: 1;
+  display: inline-block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  text-align: left;
+}
+
+.local>image {
+  width: 40rpx;
+  height: 40rpx;
+  margin: 0 20rpx;
+}
+
+.img-con {
+  position: relative;
+}
+
+.delect {
+  position: absolute;
+  width: 130rpx;
+  height: 130rpx;
+  margin: 6rpx;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.3);
+}
+/* 认证按钮 */
+.approve{
+  margin: 40rpx 10rpx;
+}
+
+picker{
+  width: 96%;
+  margin-left:22rpx;
+}
+.picker{
+  display: flex
+}
+.picker text {
+  flex: 1
+  
+}

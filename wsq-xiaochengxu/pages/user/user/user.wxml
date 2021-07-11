@@ -1,0 +1,50 @@
+<!-- 用户信息 -->
+<view class="card">
+  <view class='vertical' style='padding: 16rpx 0 24rpx 0;'>
+    <image class='avatar' src="{{user.avatar}}"/>
+    <view class='nickname'>{{user.nickname}}</view>
+    <view class='ts'>已加入 {{user.days}} 天</view>
+
+    <view class="horizontal" style="margin-top: 48rpx;">
+      <view class="gray-bg" style="color:{{theme.color}};" bindtap="clickFollow">
+        {{follow? '已关注':'+ 关注'  }}
+      </view>
+      <view style="width:24rpx;" />
+      <view class='msg gray-bg' bindtap='clickSendMessage'>
+        <image src="/res/nav_msg.png"/>
+        <text>发消息</text>
+      </view>
+    </view>
+  </view>
+</view>
+
+<!-- 帖子列表 -->
+<view wx:for="{{posts}}" wx:for-item="item" wx:key="{{item.id}}">
+  <view class="card">
+    <!-- Content Area -->
+    <view bindtap='clickItem' data-idx="{{index}}">
+      <view class="horizontal">
+        <image data-idx="{{index}}"
+          class='avatar' 
+          style='margin: 10rpx 18rpx 10rpx 0px;'
+          src="{{item.author.avatar?item.author.avatar:theme.images+'/user_icon.png'}}" 
+          />
+        <view>
+          <view class='title b5'>{{item.author.nickname?item.author.nickname:'匿名'}}</view>
+          <view class='subtitle'>{{item.time}}</view>
+        </view>
+      </view>
+      <view style='margin-bottom:9.36rpx;'/>
+      <view>
+        <kw-post item="{{item}}" />
+      </view>
+    </view>
+  </view>
+  <view style='margin-bottom:9.36rpx;'/>
+</view>
+
+<!-- 加载提示 -->
+<kw-loading loading="{{loading}}" hasmore="{{hasmore}}"/>
+
+<!-- login -->
+<kw-login class="login" />

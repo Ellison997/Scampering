@@ -1,0 +1,140 @@
+/* client/pages/enterprise-details/enterprise-details.wxss */
+
+.body {
+  margin: 10rpx;
+  padding: 12rpx;
+  margin-top: 0;
+  margin-bottom: 140rpx;
+}
+
+.show-img>image {
+  width: 100%;
+  height: 400rpx;
+}
+
+.body>view {
+}
+
+.e-title {
+  font-size: 16pt;
+  color: rgb(241, 86, 13);
+  margin-bottom: 8rpx;
+  line-height: 1.2;
+}
+
+.tit {
+  font-weight: bold;
+}
+
+.tag {
+  display: inline-block;
+  color: rgb(241, 86, 13);
+  margin-left: 60rpx;
+}
+
+.d_detail {
+  margin: 6rpx 0;
+}
+
+.d_detail>text {
+  text-indent: 20rpx;
+  text-align: left;
+}
+
+.e-img {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.e-img>view {
+  margin: 10rpx;
+  width: 30%;
+}
+
+.e-img image {
+  width: 100%;
+  height: 200rpx;
+}
+
+/* 收藏按钮 */
+
+.collect {
+  position: fixed;
+  bottom: 60rpx;
+  right: 40rpx;
+}
+
+.collect>view {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #05af22;
+  border-radius: 50%;
+  width: 80rpx;
+  height: 80rpx;
+  box-shadow: 6rpx 6rpx 4rpx #aaaaaae8;
+}
+
+.collect image {
+  width: 56rpx;
+  height: 56rpx;
+}
+
+
+/* Tab选项卡 */
+.navbar_item {
+  position: relative;
+  display: block;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  flex: 1;
+  color: #4c4a4a;
+  padding-top: 8px;
+  text-align: center;
+  font-size: 12pt;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.bar_item_on {
+  color: red;
+}
+
+.bar_item_on>text:nth-child(2) {
+  display: block;
+  width: 100rpx;
+  height: 7rpx;
+  background: red;
+  margin: 0 auto;
+  position: relative;
+  bottom: 0;
+  border-radius: 8rpx;
+  margin-top: 8rpx;
+}
+
+.weui-navbar {
+  position: relative;
+}
+
+/* 表格 */
+
+.flex-row{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px dashed #ddd;
+}
+.flex-column{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+}
+.flex-column>.header{
+  border-bottom: 1px solid #ddd;
+}
+.flex-cell{
+  flex: 1;
+  line-height: 1.8;
+  text-align: center;
+}

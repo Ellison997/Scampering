@@ -1,0 +1,14 @@
+<view class='login-view' wx:if="{{visible}}">
+  <button bindtap='clickLogin' style="background:{{theme.color}}"
+    class="login-button-normal" 
+    hover-class="login-button-hover"
+  >
+   登录
+  </button>
+</view>
+
+<view class='login-view' wx:if="{{!visible && timeout}}">
+  <view style='text-align: center'>
+    <view class="lds-ripple"><view></view><view></view></view>
+  </view>
+</view>

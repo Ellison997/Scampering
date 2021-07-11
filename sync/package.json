@@ -1,0 +1,19 @@
+{
+    "name": "sync",
+    "version": "1.0.0",
+    "description": "同步程序",
+    "main": "app.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "release": "set NODE_ENV=production&&grunt rtm",
+        "dev": "set NODE_ENV=development&&grunt watch"
+    },
+    "author": "Chunle Tian",
+    "license": "ISC",
+    "dependencies": {
+        "axios": "^0.19.0",
+        "log4js": "^6.1.2",
+        "mysql": "^2.18.1",
+        "qs": "^6.9.1"
+    }
+}

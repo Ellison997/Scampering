@@ -1,0 +1,107 @@
+/* pages/signin/signin.wxss */
+page {
+    background-color: #fff;
+}
+
+.bg {
+  height: 380rpx;
+}
+
+.exp {
+  padding-top: 8%; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.exp .level {
+  font-size: 128rpx;
+  font-weight: 400;
+}
+
+.exp .show_name {
+  font-size: 48rpx;
+  font-weight: 400;
+}
+
+.exp .value {
+  font-size: 32rpx;
+}
+
+
+.user-card {
+  position: absolute;
+  top: 300rpx;
+  right: 32rpx;
+  left: 32rpx;
+  background-color: white;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  border-radius: 8rpx;
+  padding: 24rpx 16rpx;
+  z-index: 1999;
+}
+
+.user-card .avatar {
+  width: 128rpx;
+  height: 128rpx;
+  border-radius: 50%;
+}
+
+.user-card .title {
+  font-size: 38rpx;
+  font-weight: 800;
+  margin-left: 8rpx;
+}
+
+.exp-title {
+  font-size: 38rpx;
+  font-weight: 800;
+  margin-bottom: 20rpx;
+}
+
+.next {
+  padding: 0 32rpx;
+  margin-bottom: 12rpx;
+}
+
+.next .label {
+  font-size: 28rpx;
+  font-weight: 800;
+  color: gray;
+  margin-left: 18rpx;
+}
+
+.ranks {
+  padding: 0 32rpx;
+}
+
+.ranks .item {
+  margin-top: 16rpx;
+  margin-bottom: 16rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.ranks .item .index {
+  color: #333;
+  font-size: 32rpx;
+  font-weight: 800;
+  margin-right: 32rpx;
+}
+
+.ranks .item .circle {
+  margin-right: 24rpx;
+  width: 22rpx;
+  height: 22rpx;
+  border-radius: 50%;
+  border: 1px solid transparent;
+}
+
+.ranks .item .level {
+  margin-right:12rpx;
+  color: #444; 
+  font-weight:bold;
+  font-size: 30rpx;
+}
+

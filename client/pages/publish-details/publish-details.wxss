@@ -1,0 +1,81 @@
+/* pages/publish-details/publish-details.wxss */
+
+.body {
+  margin: 10rpx;
+  padding: 12rpx;
+  margin-top: 0;
+  margin-bottom: 140rpx;
+}
+
+.show-img>image {
+  width: 100%;
+  height: 400rpx;
+}
+
+.body>view {
+}
+
+.d_title {
+  font-size: 16pt;
+  color: rgb(241, 86, 13);
+  margin-bottom: 8rpx;
+  line-height: 1.2;
+}
+
+.tit {
+  font-weight: bold;
+}
+
+.tag {
+  display: inline-block;
+  color: rgb(241, 86, 13);
+  margin-left: 60rpx;
+}
+
+.d_detail {
+  margin: 6rpx 0;
+}
+
+.d_detail>text {
+  text-indent: 20rpx;
+  text-align: left;
+}
+
+.d-img {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.d-img>view {
+  margin: 10rpx;
+  width: 30%;
+}
+
+.d-img image {
+  width: 100%;
+  height: 200rpx;
+}
+
+/* 收藏按钮 */
+
+.collect {
+  position: fixed;
+  bottom: 60rpx;
+  right: 40rpx;
+}
+
+.collect>view {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #05af22;
+  border-radius: 50%;
+  width: 80rpx;
+  height: 80rpx;
+  box-shadow: 6rpx 6rpx 4rpx #aaaaaae8;
+}
+
+.collect image {
+  width: 56rpx;
+  height: 56rpx;
+}

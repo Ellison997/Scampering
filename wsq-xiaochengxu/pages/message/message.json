@@ -1,0 +1,7 @@
+{
+  "enablePullDownRefresh": true,
+  "navigationBarTitleText": "消息",
+  "usingComponents": {
+    "kw-loading": "../tmpl/loading/loading"
+  }
+}

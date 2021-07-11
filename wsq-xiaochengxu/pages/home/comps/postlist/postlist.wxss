@@ -1,0 +1,28 @@
+@import "../../../../app.wxss";
+
+.tag-list {
+  margin-left: -14rpx; 
+  margin-right: -14rpx;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.tag {
+  border: 1px solid lightgray;
+  border-radius: 2px;
+  font-size: 32rpx;
+  color: gray;
+  padding: 4rpx 12rpx;
+  line-height: 42rpx;
+  margin: 6rpx 12rpx;
+  word-break: keep-all;
+}
+
+.menu {
+  opacity: .7;
+  margin-left: auto;
+  width: 48rpx;
+  height: 48rpx;
+  align-self: flex-start;
+}
+

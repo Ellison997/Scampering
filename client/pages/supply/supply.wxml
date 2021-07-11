@@ -1,0 +1,161 @@
+<!--pages/supply/supply.wxml-->
+<view class="container">
+  <view class='con-top'>
+    <view class='address'>
+      <picker mode="region" bindchange="bindRegionChange" value="{{region}}" custom-item="{{customItem}}">
+        <view class='picker-title'>供应地址:</view>
+        <view class="picker">
+          <text>{{region[0]}}</text>
+          <text>{{region[1]}}</text>
+          <text>{{region[2]}}</text>
+        </view>
+      </picker>
+    </view>
+    <view class="weui-search-bar" wx:if="{{!showSearch}}">
+      <view class="weui-search-bar__form">
+        <view class="weui-search-bar__box">
+          <icon class="weui-icon-search_in-box" type="search" size="14"></icon>
+          <input type="text" class="weui-search-bar__input" disabled='true' placeholder="搜索花卉信息" bindtap="searchTab" />
+        </view>
+      </view>
+    </view>
+  </view>
+  <scroll-view scroll-y style="height: {{scrollHight}}px;" bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" class='flowers-list'>
+    <view class="flowers-item" bindtap="goDetails" data-id="1">
+      <view class="f_img">
+        <image src="https://resource01.ulifestyle.com.hk/res/v3/image/content/2015000/2015551/20180222_flower_02_1024.jpg" mode='scaleToFill' />
+      </view>
+      <view class="f_content">
+        <view class='title'>
+          <text>小叶黄杨</text>
+          <text class='money'>￥2.5/颗</text>
+        </view>
+        <view>
+          <text>企业：泰安吉祥苗圃 </text>
+          <text class='tag'>[VIP][企业]</text>
+        </view>
+        <view>
+          <text>地址：山东 青州</text>
+          <text class='time'>2分钟前</text>
+        </view>
+      </view>
+    </view>
+     <view class="flowers-item" bindtap="goDetails" data-id="1">
+      <view class="f_img">
+        <image src="http://img13.360buyimg.com/n1/jfs/t6976/335/2552646908/168468/677dc94/598c6405Nd54518ca.jpg" mode='scaleToFill' />
+      </view>
+      <view class="f_content">
+        <view class='title'>
+          <text>小叶黄杨</text>
+          <text class='money'>￥2.5/颗</text>
+        </view>
+        <view>
+          <text>企业：泰安吉祥苗圃 </text>
+          <text class='tag'>[VIP][企业]</text>
+        </view>
+        <view>
+          <text>地址：山东 青州</text>
+          <text class='time'>20分钟前</text>
+        </view>
+      </view>
+    </view>
+     <view class="flowers-item" bindtap="goDetails" data-id="1">
+      <view class="f_img">
+        <image src="http://www.boyanghh.com/images/UpFile/2016-2/20162261330260.jpg" mode='scaleToFill' />
+      </view>
+      <view class="f_content">
+        <view class='title'>
+          <text>牡丹花苗</text>
+          <text class='money'>￥5.5/颗</text>
+        </view>
+        <view>
+          <text>企业：菏泽市牡丹种植园 </text>
+          <text class='tag'>[VIP]</text>
+        </view>
+        <view>
+          <text>地址：山东 菏泽市 牡丹区</text>
+          <text class='time'>2分钟前</text>
+        </view>
+      </view>
+    </view>
+     <view class="flowers-item" bindtap="goDetails" data-id="1">
+      <view class="f_img">
+        <image src="https://www.52zzl.com/uploads/allimg/180522/3-1P5221F646.jpg" mode='scaleToFill' />
+      </view>
+      <view class="f_content">
+        <view class='title'>
+          <text>大量供应月季</text>
+          <text class='money'>￥面议</text>
+        </view>
+        <view>
+          <text>企业：泰安吉祥苗圃 </text>
+          <text class='tag'>[VIP][企业]</text>
+        </view>
+        <view>
+          <text>地址：山东 潍坊</text>
+          <text class='time'>2分钟前</text>
+        </view>
+      </view>
+    </view>
+     <view class="flowers-item" bindtap="goDetails" data-id="1">
+      <view class="f_img">
+        <image src="http://www.ailianshuo.net/uploads/sugen/shaoyao/shaoyao_02.jpg" mode='scaleToFill' />
+      </view>
+      <view class="f_content">
+        <view class='title'>
+          <text>小叶黄杨</text>
+          <text class='money'>￥2.5/颗</text>
+        </view>
+        <view>
+          <text>企业：泰安吉祥苗圃 </text>
+          <text class='tag'>[VIP][企业]</text>
+        </view>
+        <view>
+          <text>地址：山东 青州</text>
+          <text class='time'>2分钟前</text>
+        </view>
+      </view>
+    </view>
+     <view class="flowers-item" bindtap="goDetails" data-id="1">
+      <view class="f_img">
+        <image src="https://resource01.ulifestyle.com.hk/res/v3/image/content/2015000/2015551/20180222_flower_02_1024.jpg" mode='scaleToFill' />
+      </view>
+      <view class="f_content">
+        <view class='title'>
+          <text>小叶黄杨</text>
+          <text class='money'>￥2.5/颗</text>
+        </view>
+        <view>
+          <text>企业：泰安吉祥苗圃 </text>
+          <text class='tag'>[VIP][企业]</text>
+        </view>
+        <view>
+          <text>地址：山东 青州</text>
+          <text class='time'>2分钟前</text>
+        </view>
+      </view>
+    </view>
+     <view class="flowers-item" bindtap="goDetails" data-id="1">
+      <view class="f_img">
+        <image src="https://resource01.ulifestyle.com.hk/res/v3/image/content/2015000/2015551/20180222_flower_02_1024.jpg" mode='scaleToFill' />
+      </view>
+      <view class="f_content">
+        <view class='title'>
+          <text>小叶黄杨</text>
+          <text class='money'>￥2.5/颗</text>
+        </view>
+        <view>
+          <text>企业：泰安吉祥苗圃 </text>
+          <text class='tag'>[VIP][企业]</text>
+        </view>
+        <view>
+          <text>地址：山东 青州</text>
+          <text class='time'>2分钟前</text>
+        </view>
+      </view>
+    </view>
+  </scroll-view>
+  <view wx:if="{{showSearch}}" class='searchCon' bindtap="closeSearch">
+    <include src="./../wxSearchView/wxSearchView.wxml" />
+  </view>
+</view>

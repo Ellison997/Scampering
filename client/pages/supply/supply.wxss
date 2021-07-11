@@ -1,0 +1,80 @@
+/* pages/supply/supply.wxss */
+@import "./../wxSearchView/wxSearchView.wxss";
+
+.address {
+  padding: 0 20rpx;
+}
+
+.picker-title {
+  display: inline-block;
+}
+
+.picker {
+  display: inline-flex;
+  flex-direction: row;
+  text-align: center;
+  width: 70%;
+  padding: 12rpx;
+  background: #fff;
+  height: 60rpx;
+  line-height: 60rpx;
+}
+
+.picker>text {
+  flex: 1;
+}
+
+.searchCon {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 200;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.flowers-item:last-child {
+  margin-bottom: 120rpx;
+}
+
+.flowers-item {
+  display: flex;
+  flex-direction: row;
+  margin: 10rpx;
+  padding: 12rpx;
+  border-bottom: 1px solid #ddd;
+}
+
+.f_img {
+  position: relative;
+  width: 180rpx;
+  min-width: 180rpx;
+  margin-right: 18rpx;
+  display: flex;
+  justify-content: center;
+}
+
+.f_img>image {
+  height: 136rpx;
+  width: 100%;
+}
+
+.f_content {
+  flex: 1;
+}
+
+.f_content>.title {
+  color: rgb(241, 13, 13);
+  font-size: 12pt;
+  line-height: 1.4;
+  margin-bottom: 5rpx;
+}
+
+.f_content .tag {
+  display: inline-block;
+  margin-left: 20rpx;
+  color: rgb(241, 135, 13);
+}
+
+.title>.money, .f_content .time {
+  float: right;
+}

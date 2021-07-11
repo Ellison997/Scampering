@@ -1,0 +1,59 @@
+<!--pages/signin/signin.wxml-->
+  <!-- 展示用户经验信息 -->
+  <view>
+    <view class='bg' style='background-color: {{theme.bgColor}}'>
+      <view class='exp' style='color: {{theme.fgColor}}'>
+        <text class='level' style='margin-right: 16rpx;'>Lv{{usrGrade.level}}</text>
+        <view>
+          <view class='show_name'>{{usrGrade.show_name}}</view>
+          <view class='value'>经验值：{{user.exp_count}}</view>
+        </view>
+      </view>
+    </view>
+
+    <!-- 用户信息卡片 -->
+    <view class='user-card'>
+      <view class='horizontal'>
+        <image class='avatar' src="{{user.avatar}}"></image>
+        <view style='width: 18rpx'></view>
+        <view>
+          <view class='title'>{{user.nickname}}</view>
+          <view class='subtitle'>你已经加入社区 {{user.joinDays}} 天啦</view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view style='height: 120rpx;'></view>
+
+  <!-- 升级进度 -->
+  <view class='next'>
+    <view>
+      <text class='exp-title'>升级进度</text>
+      <text class='label'>{{next.label}}</text>
+    </view>
+    <progress percent="{{next.percent}}" show-info />
+  </view>
+
+  <!-- 等级列表 -->
+  <view class='ranks' style='margin-top: 16rpx;'>
+    <view class='exp-title'>等级说明</view>
+    <view class='list'>
+      <view>
+      </view>
+      <view wx:for="{{grades}}" wx:for-item="item" wx:key="{{index}}">
+        <view class='item'>
+          <view class='circle' style='border-color:{{theme.bgColor}}'></view>
+          <view class='level'>Lv{{item.level}}</view>
+          <view>{{item.show_name}}</view>
+          <view style='margin-left:auto;margin-right: 8rpx;'>{{ ' ' + item.need_exp + ' '}}</view>
+          <view style='color:#444'> 点经验</view>
+        </view>
+        <view class='line'/>
+      </view>
+    </view>
+  </view>
+
+
+  <!-- Empty view for bottom -->
+  <view style='height: 120rpx;'></view>

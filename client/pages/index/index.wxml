@@ -1,0 +1,85 @@
+<!--index.wxml-->
+<view class="container">
+    <view class='con-top'>
+        <view class='header-swiper'>
+            <swiper indicator-dots="{{indicatorDots}}" autoplay="true" circular="true" interval="2000" duration="500" previous-margin="0px" next-margin="0px">
+                <block wx:for="{{imgUrls}}" wx:key="*this">
+                    <swiper-item>
+                        <image src="{{item}}" class="slide-image" />
+                    </swiper-item>
+                </block>
+            </swiper>
+        </view>
+        <view class="section">
+            <view class="flex-wrp">
+                <navigator url="../supply/supply" open-type="navigate" class="flex-item">
+                    <image class="home-icon icon-gongying" src="./home_icon/gongying.png" />
+                    <text>供应信息</text>
+                </navigator>
+                <navigator url="../supply/supply" open-type="navigate" class="flex-item">
+                    <image class="home-icon icon-qiugou" src="./home_icon/qiugou.png" />
+                    <text>求购信息</text>
+                </navigator>
+                <navigator url="../supply/supply" open-type="navigate" class="flex-item">
+                    <image class="home-icon icon-qiye" src="./home_icon/qiye.png" />
+                    <text>草木企业</text>
+                </navigator>
+            </view>
+        </view>
+    </view>
+    <!-- 滚动开始 -->
+    <scroll-view scroll-y style="height: {{scrollHight}}px;" bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" class='company-list'>
+        <view class="company-item" bindtap="goDetails" data-id="1">
+            <view class="c_img">
+                <image src="https://resource01.ulifestyle.com.hk/res/v3/image/content/2015000/2015551/20180222_flower_02_1024.jpg" mode='scaleToFill' />
+            </view>
+            <view class="c_content">
+                <view>
+                    <text class='c_title'>青州万红花卉有限公司</text>
+                    <text>主营：苗木 花卉 盆景 兰花 黄杨</text>
+                    <text>地址：山东 青州</text>
+                    <text>电话：0536-1234567</text>
+                </view>
+            </view>
+        </view>
+        <view class="company-item" bindtap="goDetails" data-id="1">
+            <view class="c_img">
+                <image src="http://www.yuhuagu.com/uploads/allimg/120121/1_120121145435_1.jpg" mode='scaleToFill' />
+            </view>
+            <view class="c_content">
+                <view>
+                    <text class='c_title'>上海太红花卉市场</text>
+                    <text>主营：苗木 花卉 盆景 黄杨 玫瑰花</text>
+                    <text>地址：上海 迪士尼公园</text>
+                    <text>电话：17888766253</text>
+                </view>
+            </view>
+        </view>
+        <view class="company-item" bindtap="goDetails" data-id="1">
+            <view class="c_img">
+                <image src="https://cdn.pixabay.com/photo/2017/06/19/23/18/flower-2421200__340.jpg" mode='scaleToFill' />
+            </view>
+            <view class="c_content">
+                <view>
+                    <text class='c_title'>徐州正红苗圃</text>
+                    <text>主营：苗木 盆景 花卉</text>
+                    <text>地址：江苏 沛县</text>
+                    <text>电话：0332-1234567</text>
+                </view>
+            </view>
+        </view>
+        <view class="company-item" bindtap="goDetails" data-id="1">
+            <view class="c_img">
+                <image src="https://resource01.ulifestyle.com.hk/res/v3/image/content/2015000/2015551/20180222_flower_02_1024.jpg" mode='scaleToFill' />
+            </view>
+            <view class="c_content">
+                <view>
+                    <text class='c_title'>青州万红花卉有限公司</text>
+                    <text>主营：苗木 花卉 盆景 兰花 黄杨</text>
+                    <text>地址：山东 青州</text>
+                    <text>电话：0536-1234567</text>
+                </view>
+            </view>
+        </view>
+    </scroll-view>
+</view>

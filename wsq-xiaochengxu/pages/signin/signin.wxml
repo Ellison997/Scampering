@@ -1,0 +1,46 @@
+<!--pages/signin/signin.wxml-->
+  <!-- 展示用户等级信息 -->
+  <view>
+  <view class='bg' style='background-color:{{theme.signColor}}'>
+  </view>
+
+  <!-- 签到卡片 -->
+  <view class='sign-card'>
+    <view class='title'>已连续签到 {{sign.today.seq_count}} 天</view>
+    <view class='list'>
+      <view class='item' wx:for="{{sign.days}}" wx:for-item="item" wx:key="{{index}}">
+        <text>{{item.signed && !item.today ? '已签到': item.date}}</text>
+        <view class="{{item.signed? 'checked': ''}}" >
+          {{item.signed? '✔': '+'+item.value}}
+        </view>
+      </view>
+    </view>
+    <view style='margin-top: 24rpx; '>
+      <button bindtap='clickSign'>{{sign.today.signed? '已签到': '未签到'}}</button>
+    </view>
+  </view>
+  </view>
+
+  <!-- 我的签到 -->
+  <view></view>
+
+  <!-- 排行榜 -->
+  <view class='ranks'>
+    <view class='.title'>签到榜</view>
+    <view wx:for="{{ranks}}" wx:for-item="item" wx:key="{{index}}">
+      <view class='item'>
+        <image wx:if="{{index<3}}" class='ranking' src="/res/rank_{{index+1}}.png" />
+        <view wx:if="{{index>=3}}" class='index'>{{index+1}}</view>
+        <image class='avatar' src="{{item.avatar}}"></image>
+        <text class='name' >{{item.nickname}}</text>
+        <text class='times'>{{item.sign_count}}</text>
+        <text class='unit'>天</text>
+        <view style='width: 12rpx;'> </view>
+      </view>
+      <view class='line' style='margin-left:72rpx;'></view>
+    </view>
+  </view>
+
+<!-- 加载提示 -->
+<kw-loading loading="{{loading}}" hasmore="{{hasmore}}" />
+<view style='height:9.36rpx;'/>

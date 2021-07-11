@@ -1,0 +1,10 @@
+{
+    "navigationBarTitleText": "即刻",
+    "navigationBarBackgroundColor": "#3197ed",
+    "navigationBarTextStyle": "white",
+    "usingComponents": {
+        "todo-item": "/components/todo-item/todo-item",
+        "tips-info": "/components/tips-info/tips-info",
+        "note-card": "/components/note-card/note-card"
+    }
+}

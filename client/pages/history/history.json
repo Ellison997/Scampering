@@ -1,0 +1,8 @@
+{
+    "usingComponents": {
+        "calendar": "/components/calendar/index"
+    },
+    "navigationBarBackgroundColor": "#3197ed",
+    "navigationBarTextStyle": "white",
+    "backgroundTextStyle": "dark"
+}

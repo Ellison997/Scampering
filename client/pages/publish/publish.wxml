@@ -1,0 +1,90 @@
+<!--pages/publish/publish.wxml-->
+<view class="container">
+    <!--tab  -->
+    <view class='con-top'>
+        <view class="weui-tab">
+            <view class="weui-navbar">
+                <view class="navbar_item {{currentTab==0?'bar_item_on':''}}" data-current="0" bindtap="clickTab">
+                    <text>我的供应</text>
+                    <text></text>
+                </view>
+                <view class="navbar_item {{currentTab==1?'bar_item_on':''}}" data-current="1" bindtap="clickTab">
+                    <text>我的求购</text>
+                    <text></text>
+                </view>
+            </view>
+        </view>
+    </view>
+    <!--end  -->
+    <swiper current="{{currentTab}}" duration="300"  bindchange="swiperTab" style='height:{{scrollHight}}px;' >
+    <!--我的供应  -->
+        <swiper-item>
+            <scroll-view scroll-y style="height: {{scrollHight}}px;" bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" class='flowers-list'>
+                <block wx:for='{{array}}' wx:key='{{i}}'>
+                    <view class="flowers-item" bindtap="goDetails" data-id="1">
+                        <view class="f_img">
+                            <image src="{{item.src}}" mode='scaleToFill' />
+                        </view>
+                        <view class="f_content">
+                            <view class='title'>
+                                <text>{{item.name}}</text>
+                                <text class='money'>￥{{item.price}}</text>
+                            </view>
+                            <view>
+                                <text>企业：{{item.qiye}} </text>
+                                <text class='tag'>{{item.vip}}</text>
+                            </view>
+                            <view>
+                                <text>地址：{{item.address}}</text>
+                                <text class='time'>{{item.time}}</text>
+                            </view>
+                        </view>
+                    </view>
+                </block>
+                <view class='addBtn'>
+                    <view>
+                        <navigator url="../publish-supply/publish-supply" open-type="navigate">
+                            <text>+</text>
+                        </navigator>
+                    </view>
+                </view>
+            </scroll-view>
+        </swiper-item>
+        <!--end  -->
+        <!--我的求购  -->
+        <swiper-item>
+            <scroll-view scroll-y style="height: {{scrollHight}}px;" bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" class='flowers-list'>
+                <block wx:for='{{array}}' wx:key='{{i}}'>
+                    <view class="flowers-item" bindtap="goDetails" data-id="1">
+                        <view class="f_img">
+                            <image src="{{item.src}}" mode='scaleToFill' />
+                        </view>
+                        <view class="f_content">
+                            <view class='title'>
+                                <text>{{item.name}}</text>
+                                <text class='money'>￥{{item.price}}</text>
+                            </view>
+                            <view>
+                                <text>企业：{{item.qiye}} </text>
+                                <text class='tag'>{{item.vip}}</text>
+                            </view>
+                            <view>
+                                <text>地址：{{item.address}}</text>
+                                <text class='time'>{{item.time}}</text>
+                            </view>
+                        </view>
+                    </view>
+                </block>
+                <view class='addBtn'>
+                    <view>
+                        <navigator url="../publish-supply/publish-supply" open-type="navigate">
+                            <text>+</text>
+                        </navigator>
+                    </view>
+                </view>
+            </scroll-view>
+        </swiper-item>
+        <!--end  -->
+    </swiper>
+    
+</view>

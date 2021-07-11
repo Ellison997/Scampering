@@ -1,0 +1,32 @@
+<view class="container timer {{isRuning ? 'timer--runing': ''}}">
+  <view class="history" bindtap="goHistory">
+    <text>历史</text>
+  </view>
+  <view class="timer_main">
+    <view class="timer_time-wrap">
+      <view class="timer_progress_mask"></view>
+      <view class="timer_progress timer_left">
+        <view class="timer_circle timer_circle--left" style="transform: rotate({{leftDeg}}deg);"></view>
+      </view>
+      <view class="timer_progress timer_right">
+        <view class="timer_circle timer_circle--right" style="transform: rotate({{rightDeg}}deg);"></view>
+      </view>
+      <view style="width: 200rpx;text-align: center;">
+        <text wx:if="{{!completed}}" class="timer_time">{{remainTimeText}}</text>
+        <text wx:if="{{isRuning}}" animation="{{nameAnimation}}" class="timer_taskName">{{taskName}}{{completed ? '已完成！' : '中'}}</text>
+      </view>
+      <image wx:if="{{completed}}" class="timer_done" src="../../image/complete.png"></image>
+    </view>
+  </view>
+
+  <view wx:if="{{!isRuning}}">
+    <input type="text" placeholder-style="text-align:center" class="timer_inputname" bindinput="changeLogName" placeholder="给您的任务取个名字吧" />
+  </view>
+  <view class="timer_footer" wx:if="{{!isRuning}}">
+    <view bindtap="startTimer" data-type="work" class="timer_ctrl">工作</view>
+    <view bindtap="startTimer" data-type="rest" class="timer_ctrl">休息</view>
+  </view>
+  <view class="timer_footer" wx:else>
+    <view bindtap="startTimer" data-type="{{timerType}}" class="timer_ctrl">完成</view>
+  </view>
+</view>

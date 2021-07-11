@@ -1,0 +1,15 @@
+<!--pages/poster/poster.wxml-->
+<drawer painting="{{painting}}" 
+  bind:getImage="eventGetImage" 
+  bind:onCursorChanged="onCursorChanged"
+  bind:sizeChanged="onSizeChanged"
+/>
+<view class="body">
+  <view class="{{filePath? 'hide': ''}}" style="width:{{width}}px;height:{{height}}px;">
+  </view>
+  <image wx:if="{{filePath}}" src="{{filePath}}" mode='aspectFit' />
+</view>
+<view class="footer" catchtap="saveImage">
+  <view class="-title ">保存图片</view>
+  <view class="fade-title">(保存图片到相册，与朋友一起分享)</view>
+</view>

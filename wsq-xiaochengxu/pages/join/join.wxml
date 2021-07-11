@@ -1,0 +1,76 @@
+
+<!-- <view class="h1">申请加入社区</view> -->
+
+<!-- 认证社区需要先申请才能通过 -->
+<view style="background-image: url({{meta.app_cover}});background-size:100% auto;">
+  <view class='app'>
+    <image src="{{meta.app_logo}}"></image>
+    <view class='name'>{{meta.app_name}}</view>
+  </view>
+</view>
+
+<view class="count">
+  <view class="v">
+    <view>用户数</view>
+    <text style="color:{{theme.color}}">{{meta.user_count}}</text>
+  </view>
+  <view class="v">
+    <view>帖子数</view>
+    <text style="color:{{theme.color}}">{{meta.post_count}}</text>
+  </view>
+  <view class="v">
+    <view>当前活跃</view>
+    <text style="color:{{theme.color}}">{{meta.user_active }}</text>
+  </view>
+</view>
+
+<view class="detail">
+    <view>社区名称：{{meta.app_name}}</view>
+    <view>社区简介：{{meta.app_summary}}</view>
+</view>
+
+<view class="tip" style="margin-top: 32rpx;margin-bottom:24rpx">
+  {{join.status == undefined ? "此社区为认证社区，需要管理员同意后才能加入。":""}}
+  {{join.status == 0 ? "加入请求已发送，请耐心等待。": ""}}
+  {{join.status == 1 ? "管理员拒绝加入该社区！":""}}
+  {{join.status == 2 ? "您已成功加入社区, 请返回登录!": ""}}
+</view>
+
+<view class="card">
+  <view class="-title">信息绑定</view>
+  <view class="input" style="margin-top:32rpx;">
+    <view class="name">微信昵称:</view>
+    <button class="btn-clear" style="margin-left:auto" 
+      open-type="getUserInfo" bindgetuserinfo="bindUserInfo">
+      {{user.nickname}}
+      <view class="btn" wx:if="{{!user.nickname}}" >
+        <text>一键获取</text><view class="underline"/> 
+      </view>
+    </button>
+  </view>
+  <view wx:if="{{mode==2}}" class="input" style="margin-top:16rpx;">
+    <view class="circle"/>
+    <view class="name">手机:</view>
+    <button class="btn-clear" style="margin-left:auto" 
+      open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber" >
+      {{user.phone}}
+      <view class="btn" wx:if="{{!user.phone}}">
+        <text>一键获取</text><view class="underline"/>
+      </view>
+    </button>
+  </view>
+</view>
+
+<view class="m" ></view>
+
+<view class="card" style="padding-bottom:128rpx">
+  <view class="-title">申请留言</view>
+  <textarea class="text" 
+    placeholder="写点什么.." 
+    bindinput="bindText" 
+    maxlength='175'></textarea>
+</view>
+
+<cover-view class="fixed">
+  <button style="background:{{theme.color}};color:white" bindtap="clickJoin" >加入社区</button>
+</cover-view>

@@ -1,0 +1,45 @@
+<view>
+  <view class='top-view'>
+    <calendar least-days="{{ leastDays }}" bind:calendarchange="onCalendarChange" bind:statechange="onStateChange" />
+    <!--tab  -->
+    <view class='con-top'>
+      <view class="weui-tab">
+        <view class="weui-navbar">
+          <view class="navbar_item {{currentTab==0?'bar_item_on':''}}" data-current="0" bindtap="clickTab">
+            <text>任务</text>
+            <text></text>
+          </view>
+          <view class="navbar_item {{currentTab==1?'bar_item_on':''}}" data-current="1" bindtap="clickTab">
+            <text>笔记</text>
+            <text></text>
+          </view>
+          <view class="navbar_item" data-current="2" bindtap="clickTab ">
+            <text>番茄钟</text>
+            <text></text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <swiper current="0" duration="300" style='height:{{scrollHight}}px;'>
+    <swiper-item>
+      <scroll-view scroll-y style="height: {{scrollHight}}px;" >
+        <block wx:for='{{array}}' wx:key='{{i}}'>
+          <view class="todo-item">
+            <view>
+              <text class='t-head'>{{item.name}}</text>
+              <text class='float-right'>{{item.time}}</text>
+            </view>
+            <view class="t-details">
+              <text>{{item.detail}}</text>
+            </view>
+            <view class="">
+              <text class='{{item.role==1? "c-blue" : "c-yellow"}}'>我的角色：{{item.role==1?"交办人":"跟办人"}}</text>
+              <text class='float-right'>. . .</text>
+            </view>
+          </view>
+        </block>
+      </scroll-view>
+    </swiper-item>
+  </swiper>
+</view>

@@ -1,0 +1,126 @@
+/**index.wxss**/
+
+page {
+    background: #f2f2f2;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+
+/* 个人信息 */
+
+.my-container {
+    height: 200rpx;
+    background: #3197ed;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 0 20rpx;
+}
+
+.userinfo {
+    height: 140rpx;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.userinfo-avatar {
+    width: 120rpx;
+    height: 120rpx;
+    margin: 20rpx;
+    border-radius: 50%;
+}
+
+.userinfo-nickname {
+    font-size: 32rpx;
+    height: 60rpx;
+    line-height: 60rpx;
+}
+
+.nickname {
+    font-size: 48rpx;
+    color: #fff;
+}
+
+.userinfo-nickname::after {
+    border: none;
+}
+
+.info {
+    text-align: center;
+}
+
+.info-text {
+    display: block;
+}
+
+
+/* end */
+
+.uploader,
+.tunnel {
+    margin-top: 40rpx;
+    height: 140rpx;
+    width: 100%;
+    background: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-left: none;
+    border-right: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    transition: all 300ms ease;
+}
+
+
+/*body  */
+
+.body {
+    width: 95%;
+    border: 1px dotted #ccc;
+    box-sizing: border-box;
+    margin: 40rpx auto;
+}
+
+.body view {
+    width: 100%;
+    font-size: 30rpx;
+    padding: 0 20rpx;
+    height: 80rpx;
+    line-height: 78rpx;
+    border-bottom: 1px dotted #bbb;
+    box-sizing: border-box;
+}
+
+.body view:last-child {
+    border: none;
+}
+
+.body-yaoqing {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.body-yaoqing text:last-child {
+    font-size: 26rpx;
+    color: #59595a;
+}
+
+
+/*end  */
+
+
+/* 图表 */
+
+.chartsA {
+    height: 500rpx
+}
+
+.chartsB {
+    height: 166px
+}

@@ -1,0 +1,47 @@
+<!--my.wxml-->
+<!-- 个人信息 -->
+<view class="my-container">
+  <view class="userinfo">
+    <image class="userinfo-avatar" src="{{logged ? userInfo.avatarUrl : './user-unlogin.png'}}" background-size="cover"></image>
+    <view>
+      <button class="userinfo-nickname" wx:if="{{!logged}}" open-type="getUserInfo" bindgetuserinfo="doLogin">点击登录</button>
+      <text class="nickname" wx:else>{{userInfo.nickName}}</text>
+    </view>
+  </view>
+
+</view>
+
+<!-- end -->
+<van-grid column-num="3" border="{{ false }}">
+  <van-grid-item use-slot>
+    <view class="info">
+      <text>25</text>
+      <text class="info-text">任务</text>
+    </view>
+  </van-grid-item>
+  <van-grid-item use-slot>
+    <view class="info">
+      <text>25</text>
+      <text class="info-text">笔记</text>
+    </view>
+  </van-grid-item>
+  <van-grid-item use-slot>
+    <view class="info">
+      <text>25</text>
+      <text class="info-text">任务完成率</text>
+    </view>
+  </van-grid-item>
+</van-grid>
+
+
+<van-panel title="每天完成量">
+  <view class="chartsA">
+    <ec-canvas id="chartsA" canvas-id="chartsA-bar" ec="{{ ecA }}"></ec-canvas>
+  </view>
+</van-panel>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       
+
+<view style="margin-top: 30rpx;">
+  <van-cell is-link title="设置" link-type="navigateTo" url="/pages/setting/setting" />
+</view>
+<!-- end -->

@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "我的帖子",
+  "enablePullDownRefresh": true,
+  "backgroundTextStyle": "dark",
+  "usingComponents": {
+    "kw-loading": "../tmpl/loading/loading",
+    "kw-post": "../tmpl/post/kw-post"
+  }
+}

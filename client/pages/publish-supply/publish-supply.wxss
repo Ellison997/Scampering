@@ -1,0 +1,102 @@
+/* pages/publish-supply/publish-supply.wxss */
+
+.form-supply, .button {
+  margin: 10rpx 40rpx;
+  margin-top: 20rpx;
+}
+
+.item {
+  display: flex;
+  /* align-items: center; */
+  min-height: 80rpx;
+  margin-top: 10rpx;
+}
+
+.item>text {
+  display: inline-block;
+  width: 100rpx;
+  min-width: 100rpx;
+  text-align: center;
+}
+
+.item>input {
+  display: inline-block;
+  border-bottom: 1px solid #ddd;
+  width: 80%;
+}
+
+.f-number>input {
+  width: 60%;
+}
+
+.detail {
+  margin-top: 20rpx;
+}
+
+.detail>textarea {
+  height: 160rpx;
+  width: 80%;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 10rpx;
+}
+.imgs{
+  display: flex;
+   flex-direction: row;
+   flex-wrap: wrap;
+}
+
+.img{
+  width: 130rpx;
+  height: 130rpx;
+  margin: 6rpx;
+}
+
+.add-img {
+  font-size: 50pt;
+  color: #ddd;
+  border: 1px dashed #ddd;
+  line-height: 110rpx;
+  text-align: center;
+  display: inline-block;
+}
+
+.button {
+  display: flex;
+  align-content: center;
+  margin-top: 40rpx;
+  margin-bottom: 160rpx;
+}
+
+.button>button {
+  width: 150rpx;
+}
+
+.local>.local_text {
+  flex: 1;
+  display: inline-block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  text-align: left;
+}
+.local>image{
+   width: 40rpx;
+   height: 40rpx;
+   margin: 0 20rpx;
+}
+
+
+.img-con {
+  position: relative;
+}
+
+.delect {
+  position: absolute;
+  width: 130rpx;
+  height: 130rpx;
+  margin: 6rpx;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.3);
+}

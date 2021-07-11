@@ -1,0 +1,20 @@
+/* pages/message/list/comment.wxss */
+@import "./shared.wxss";
+
+page {
+    background-color:#fff;
+}
+
+.h-top {
+  display: flex;
+  align-items: top;
+}
+
+.unread {
+  background-color:rgba(30, 144, 255, .1);
+}
+
+.thin-line {
+  height: 1px;
+  background-color: #f8f8f8;
+}

@@ -1,0 +1,85 @@
+<!--client/pages/enterprise-details/enterprise-details.wxml-->
+<view class="container">
+  <view class='show-img'>
+    <image src="https://resource01.ulifestyle.com.hk/res/v3/image/content/2015000/2015551/20180222_flower_02_1024.jpg" mode='scaleToFill' />
+  </view>
+  <view class='body'>
+    <view class='e-title'>
+      <text>青州万红花卉有限公司</text>
+      <text class='tag'>[VIP][企业]</text>
+    </view>
+    <view>
+      <text class='tit'>主营：</text>
+      <text>草木 花卉 盆景 兰花 黄杨</text>
+    </view>
+    <view>
+      <text class='tit'>简介：</text>
+      <view class='e_detail'>
+        <text decode="true">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;小叶黄杨是黄杨科，黄杨属灌木，生长低矮，枝条密集，枝圆柱形，小枝四棱形，叶薄革质，阔椭圆形或阔卵形，叶片无光或光亮。3月开会花，5-6月结果。</text>
+      </view>
+    </view>
+    <view>
+      <text class='tit'>联系人：</text>
+      <text>张国强</text>
+    </view>
+    <view>
+      <text class='tit'>电话：</text>
+      <text>178****2345</text>
+    </view>
+    <view>
+      <text class='tit'>位置：</text>
+      <text>山东省泰安市岱岳区214国道</text>
+    </view>
+    <view class="weui-tab">
+      <view class="weui-navbar">
+        <view class="navbar_item {{s_supply ? 'bar_item_on' : ''}}" bindtap="supply">
+          <text>供应信息</text>
+          <text></text>
+        </view>
+        <view class="navbar_item {{s_purchase ? 'bar_item_on' : ''}}" bindtap="purchase">
+          <text>求购信息</text>
+          <text></text>
+        </view>
+        <view class="navbar_item"></view>
+        <view class="navbar_item"></view>
+      </view>
+      <view class='goods-list'>
+        <view  class="flex-column">
+          <view class="flex-cell flex-row header">
+            <text class="flex-cell">名称</text>
+            <text class="flex-cell">数量</text>
+            <text class="flex-cell">规格</text>
+            <text class="flex-cell">在售</text>
+          </view>
+          <view class="flex-row flex-cell">
+            <text class="flex-cell">兰花</text>
+            <text class="flex-cell">5000（棵）</text>
+            <text class="flex-cell">50cm</text>
+            <text class="flex-cell">是</text>
+          </view>
+          <view class="flex-row flex-cell">
+            <text class="flex-cell">盆景</text>
+            <text class="flex-cell">200（盆）</text>
+            <text class="flex-cell">20</text>
+            <text class="flex-cell">否</text>
+          </view>
+          <view class="flex-row flex-cell">
+            <text class="flex-cell">小叶黄杨</text>
+            <text class="flex-cell">10000（棵）</text>
+            <text class="flex-cell">10</text>
+            <text class="flex-cell">是</text>
+          </view>
+         
+        </view>
+      </view>
+    </view>
+
+
+
+  </view>
+  <view class='collect'>
+    <view>
+      <image mode='aspectFit' src='./icon/collect.png'></image>
+    </view>
+  </view>
+</view>

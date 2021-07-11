@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "签到",
+  "backgroundColor": "#fff",
+  "usingComponents": {
+    "kw-loading": "../tmpl/loading/loading"
+  }
+}

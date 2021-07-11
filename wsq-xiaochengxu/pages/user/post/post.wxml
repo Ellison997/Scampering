@@ -1,0 +1,22 @@
+<view style='margin-bottom:18rpx;'/>
+<view wx:for="{{posts}}" wx:for-item="item" wx:key="{{item.id}}">
+  <view class="card" bindtap='clickItem' data-idx='{{index}}'>
+    <view class="horizontal">
+      <image class='avatar-large' style='margin: 9.36rpx 9.36rpx 9.36rpx 0px;'
+        src="{{item.author.avatar?item.author.avatar:theme+'/user_icon.png'}}" 
+        />
+      <view>
+        <view class='title b5'>{{item.author.nickname?item.author.nickname:'匿名'}}</view>
+        <view class='subtitle'>{{item.time}}</view>
+      </view>
+    </view>
+    <view style='margin-bottom:6rpx;'/>
+    <!-- 图片 和 文字-->
+    <view style='margin-left:90rpx;' bindtap='topicClick' data-item="{{item}}">
+      <kw-post item="{{item}}" mr="90rpx" />
+    </view>
+  </view>
+  <view style='margin-bottom:9rpx;'/>
+</view>
+
+<kw-loading loading="{{loading}}" hasmore="{{hasmore}}"/>

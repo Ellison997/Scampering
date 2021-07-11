@@ -1,0 +1,29 @@
+<!--pages/chat/chat.wxml-->
+<import src="./comps/chat-item.wxml"/>
+
+<!-- 对话列表 -->
+<scroll-view
+    class='list'
+    style="height:100vh;"
+    scroll-y="true"
+    scroll-top="{{scrollTopVal}}"
+    bindtap="resetInputStatus"
+    bindscrolltoupper="onPullDown">
+
+    <!-- 加载状态 -->
+    <kw-loading loading="{{loading}}" hasmore="{{hasmore}}" />
+
+    <!-- 对话列表 -->
+    <block wx:for="{{chatItems}}" wx:key="{{index}}">
+        <template is="chat-item" data="{{length:chatItems.length,index:index,item:item}}"/>
+    </block>
+
+</scroll-view>
+
+<!-- 输入框 -->
+<kw-input bind:sendComment='sendComment' hint="{{reply.hint}}" />
+
+<!-- 刷新 -->
+<view>
+  <image catchtap='clickRefresh' class='refresh' src="/res/refresh.png"></image>
+</view>

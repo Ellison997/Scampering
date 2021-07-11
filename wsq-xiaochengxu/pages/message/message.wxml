@@ -1,0 +1,60 @@
+<!--pages/message/message.wxml-->
+<view class='card'>
+
+  <!-- 点赞消息 -->
+  <view class='horizontal' bindtap='favorClick'>
+    <image class='icon-m' style='margin: 9rpx 9rpx 9rpx 0px;'
+        src="{{theme.images}}/msg_like.png" 
+        />
+    <view>
+      <text>点赞</text>
+    </view>
+    <view class='horizontal' style='margin-left: auto;' >
+      <view class='red-tag' wx:if='{{count.favors > 0}}'>
+        {{count.favors}}
+      </view>
+      <image class='arrow_right' src="{{theme.images}}/arrow_right.png"/>
+    </view>
+  </view>
+
+  <view class='line' style='margin-left:112rpx;'></view>
+
+  <!-- 评论消息 -->
+  <view class='horizontal' bindtap='commentClick'>
+    <image class='icon-m' style='margin: 9rpx 9rpx 9rpx 0px;'
+        src="{{theme.images}}/msg_cmt.png" 
+        />
+    <view>
+      <text>评论</text>
+    </view>
+    <view class='horizontal' style='margin-left: auto;' >
+      <view class='red-tag' wx:if='{{count.comments > 0}}'>
+        {{count.comments}}
+      </view>
+      <image class='arrow_right' src="{{theme.images}}/arrow_right.png" />
+    </view>
+  </view>
+
+  <!-- 私信消息 -->
+  <view wx:for="{{chats}}" wx:for-item="item" wx:key="{{item.id}}">
+    <view class='line' style='margin-left:112rpx;'></view>
+    <view class='horizontal'  bindtap='clickItem' data-idx='{{index}}'>
+      <image class='avatar' style='margin: 9rpx 16rpx 9rpx 7rpx;'
+        src="{{item.other.avatar?item.other.avatar: theme.images+'/user_icon.png'}}" 
+        />
+      <view class="body">
+        <view class='title'>{{item.other.nickname?item.other.nickname:'用户已删除'}}</view>
+        <view class='subtitle single-line'>{{item.content}}</view>
+      </view>
+      <view style='margin-left: auto; padding-right: 8rpx;'>
+        <view style='font-size:24rpx; margin-bottom: 20rpx;'>{{item.date}}</view>
+        <view wx:if="{{item.unread}}" class='circle' style='margin: 0 auto;'/>
+      </view>
+    </view>
+  </view>
+
+</view>
+
+
+<!-- 加载提示 -->
+<kw-loading loading="{{loading}}" hasmore="{{hasmore}}"/>

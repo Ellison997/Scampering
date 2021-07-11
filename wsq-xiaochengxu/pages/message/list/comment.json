@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "评论",
+  "enablePullDownRefresh": true,
+  "backgroundTextStyle": "dark",
+  "backgroundColor": "#fff",
+  "usingComponents": {
+    "kw-loading": "../../tmpl/loading/loading"
+  }
+}

@@ -1,0 +1,39 @@
+/* pages/message/message.wxss */
+
+.arrow_right {
+  width: 56rpx; 
+  height: 56rpx;
+  min-width: 56rpx;
+  max-width: 56rpx;
+}
+
+.icon-m {
+  width: 94rpx; 
+  height: 94rpx;
+}
+
+.avatar {
+  width: 82rpx; 
+  height: 82rpx;
+  border-radius: 50%;
+}
+
+.body {
+  max-width: 500rpx;
+}
+
+.red-tag {
+  border-radius: .8em;
+  background: #FF4444;
+  color: #fff;
+  text-align: center;
+  min-width: 1.6em;
+  font-size: 1em;
+}
+
+.circle {
+  border-radius: 50%;
+  background: #FF4444;
+  width: 16rpx;
+  height: 16rpx;
+}

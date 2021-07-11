@@ -1,0 +1,40 @@
+/* pages/message/list/chat.wxss */
+@import "./comps/chat-item.wxss";
+
+page {
+    background-color: #EFEFEF;
+}
+
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  color: transparent;
+}
+
+.list {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.chat-page-status-style{
+    width: 100%;
+    height: 54rpx;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 26rpx;
+    color: white;
+    position: fixed;
+    top:0;
+    left:0;
+    z-index: 20;
+}
+
+.refresh {
+  position: fixed;
+  bottom: 160rpx;
+  right: 20rpx;
+  width: 64rpx;
+  height: 64rpx;
+}

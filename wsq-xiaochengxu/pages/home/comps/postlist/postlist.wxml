@@ -1,0 +1,64 @@
+<!-- 话题标签 -->
+<view class='card' wx:if="{{tags.length>0}}">
+  <view class='tag-list'>
+    <view class='tag'
+      bindtap='clickTag'
+      data-idx="{{index}}"
+      style="{{index == tagSelected? 'color:' +theme.tabColor+ ';border-color:'+theme.tabColor:''}}"
+      wx:for="{{tagArray}}" wx:for-item="item" wx:key="{{item}}"> {{item.text}} </view>
+  </view>
+  <view style='margin-bottom:9.36rpx; background-color: #fefefe;'/>
+</view>
+
+<!-- 帖子列表 -->
+<view wx:for="{{posts}}" wx:for-item="item" wx:key="{{item.id}}">
+  <view wx:if="{{item.ad}}">
+    <kw-adver type="home_feed"/>
+  </view>
+  <view class="card" wx:if="{{!item.ad}}" >
+    
+    <!-- Content Area -->
+    <view bindtap='clickItem' data-idx="{{index}}">
+      <view class="horizontal">
+        <image catchtap='clickAvatar' data-idx="{{index}}"
+          class='avatar-large' 
+          style='margin: 10rpx 18rpx 10rpx 0px;'
+          src="{{item.author.avatar?item.author.avatar:theme.images+'/user_icon.png'}}" 
+          />
+        <view>
+          <view class='title b5'>{{item.author.nickname?item.author.nickname:'匿名'}}
+          <text wx:if="{{item.author.admin_label}}" 
+            class="user-label"
+            style="background:{{theme.adminColor}}; opacity: .9"
+          >管理员</text>
+          <text wx:if="{{item.author.level_label}}" 
+            class="user-label" 
+            style="background:{{theme.levelColor}}; opacity: .8"
+          >{{item.author.level_label}}</text>
+          </view>
+          <view class='subtitle'>{{item.agoTime}}</view>
+        </view>
+        <image class='menu' src="/res/menu.png" catchtap='clickMenu' data-idx='{{index}}' />
+      </view>
+      <view style='margin-bottom:9.36rpx;'/>
+      <view>
+        <kw-post item="{{item}}" />
+      </view>
+    </view>
+    <view class='line'></view>
+    <!-- Comment and Favor bar -->
+    <view class='flow-right'>
+      <view class='fade-title' style='margin-right:auto;'>{{item.time}}</view>
+      <view class='comment' bindtap='commentClick' data-idx="{{index}}">
+        <comment comments="{{item.stats.comments}}" />
+      </view>
+      <view bindtap='favorClick' data-idx="{{index}}">
+        <kw-like favored="{{item.stats.favored}}" favors="{{item.stats.favors}}" />
+      </view>
+    </view>
+  </view>
+  <view style='margin-bottom:9.36rpx;'/>
+</view>
+
+<!-- 加载提示 -->
+<kw-loading loading="{{loading}}" hasmore="{{hasmore}}"/>

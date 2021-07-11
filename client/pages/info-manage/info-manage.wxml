@@ -1,0 +1,44 @@
+<!--client/pages/enterprise-details/enterprise-details.wxml-->
+<view class="container">
+  <view class='show-img'>
+    <swiper indicator-dots="{{indicatorDots}}" autoplay="true" circular="true" interval="2000" duration="500" previous-margin="0px" next-margin="0px">
+      <block wx:for="{{com_img}}" wx:key="*this">
+        <swiper-item>
+          <image src="{{item}}" class="slide-image" />
+        </swiper-item>
+      </block>
+    </swiper>
+
+  </view>
+  <view class='body'>
+    <view class='e-title'>
+      <text>{{ com_name }}</text>
+      <!-- <text class='tag'>[VIP][企业]</text> -->
+    </view>
+    <view>
+      <text class='tit'>主营：</text>
+      <text>草木 花卉 盆景 兰花 黄杨</text>
+    </view>
+    <view>
+      <text class='tit'>简介：</text>
+      <view class='e_detail'>
+        <text decode="true">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{com_info}}</text>
+      </view>
+    </view>
+    <view>
+      <text class='tit'>联系人：</text>
+      <text>{{real_name}}</text>
+    </view>
+    <view>
+      <text class='tit'>电话：</text>
+      <text>{{ phone }}</text>
+    </view>
+    <view>
+      <text class='tit'>位置：</text>
+      <text>{{detail_address}}</text>
+    </view>
+    <view class='button'>
+      <button type="primary" bindtap="goEdit" size="default" form-type="submit"> 修改 </button>
+    </view>
+  </view>
+</view>

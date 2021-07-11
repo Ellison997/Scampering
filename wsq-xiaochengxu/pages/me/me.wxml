@@ -1,0 +1,98 @@
+<!--pages/me/me.wxml-->
+<view class='card' style='margin: 18rpx 0 18rpx 0;'>
+  <view class='horizontal'>
+    <image class='avatar' 
+      src="{{user.avatar?user.avatar:'/res/placeholder.png'}}">
+    </image>
+    <view style='margin-left:18rpx;'>
+      <view>
+        <text wx:if="{{user.nickname}}" style='font-size:30rpx;'>{{user.nickname}}</text>
+        <view hidden='{{user.nickname}}'>
+          <button wx:if="{{metadata.user_mode < 2}}"
+          class='btn-clear btn' 
+          hover-class='btn-hover'
+          style='color: {{theme.color}};'
+          open-type="getUserInfo" 
+          bindgetuserinfo="bindUserInfo"
+          >点击登录</button>
+          <button wx:if="{{metadata.user_mode == 2}}"
+          class='btn-clear btn' 
+          hover-class='btn-hover'
+          style='color: {{theme.color}};'
+          bindtap='clickBindProfile'
+          >点击登录</button>
+        </view>
+        <text wx:if="{{expLabel && user.nickname}}" 
+          class='grade' 
+          style='background-color:{{theme.gradeColor}}'
+          bindtap='clickExp'>{{expLabel}}</text>
+      </view>
+      <button wx:if="{{user.nickname && metadata.user_mode}}"
+        open-type="getPhoneNumber"
+        bindgetphonenumber="getPhoneNumber"
+        class='btn-clear subtitle'>{{user.phone? user.phone: '绑定手机号'}}</button>
+    </view>
+    <view wx:if="{{user.nickname}}" class="setting" bindtap="clickEdit" > 
+      <image class="arrow-right" src="{{theme.images}}/arrow_right.png"></image>
+    </view>
+  </view>
+</view>
+
+<!-- 其它信息 -->
+<view class='card'>
+  <view class='horizontal' bindtap='postClick'>
+    <image class='icon-small' style='margin: 9.36rpx 9.36rpx 9.36rpx 0;'
+      src='{{theme.images}}/my_post.png'></image>
+    <text class='title'>我的帖子</text>
+    <image class='arrow-right' style='margin-left:auto;'
+      src='{{theme.images}}/arrow_right.png'></image>
+  </view>
+  <view class='line' style='margin-left:112rpx;'></view>
+
+  <view class='horizontal' bindtap='commentClick'>
+    <image class='icon-small' style='margin: 9.36rpx 9.36rpx 9.36rpx 0;'
+      src='{{theme.images}}/my_cmt.png'></image>
+    <text class='title'>我的评论</text>
+    <image class='arrow-right' style='margin-left:auto;'
+      src='{{theme.images}}/arrow_right.png'></image>
+  </view>
+  <view class='line' style='margin-left:112rpx;'></view>
+
+
+  <view class='horizontal' bindtap='favorClick'>
+    <image class='icon-small' style='margin: 9.36rpx 9.36rpx 9.36rpx 0;'
+      src='{{theme.images}}/my_like.png'></image>
+    <text class='title'>我的点赞</text>
+    <image class='arrow-right' style='margin-left:auto;'
+      src='{{theme.images}}/arrow_right.png'></image>
+  </view>
+</view>
+
+<view class="card">
+  <view class='horizontal' bindtap='favoriteClick'>
+    <image class='icon-small' style='margin: 9.36rpx 9.36rpx 9.36rpx 0;'
+      src='{{theme.images}}/my_favor.png'></image>
+    <text class='title'>我的收藏</text>
+    <image class='arrow-right' style='margin-left:auto;'
+      src='{{theme.images}}/arrow_right.png'></image>
+  </view>
+  <view class='line' style='margin-left:112rpx;'></view>
+  <view class='horizontal' bindtap='followClick'>
+    <image class='icon-small' style='margin: 9.36rpx 9.36rpx 9.36rpx 0;'
+      src='{{theme.images}}/my_follow.png'></image>
+    <text class='title'>我的关注</text>
+    <image class='arrow-right' style='margin-left:auto;'
+      src='{{theme.images}}/arrow_right.png'></image>
+  </view>
+</view>
+
+<!-- 版权信息 -->
+<view class='info'>
+  <text
+    style='color: #576b95; font-size: 30rpx;'
+  >{{copyright}}</text>
+  <text wx:if="{{support}}">卡哇微社区(kawaapp.com) 提供技术支持</text>
+</view>
+
+<!-- login dialog -->
+<kw-login class="login" bind:onOk="onOk" />
