@@ -18,10 +18,7 @@ export default (): React.ReactNode => {
     <PageContainer>
       <Card>
         <Alert
-          message={intl.formatMessage({
-            id: 'pages.welcome.alertMessage',
-            defaultMessage: 'Faster and stronger heavy-duty components have been released.',
-          })}
+          message="这是一个成功消息框"
           type="success"
           showIcon
           banner
@@ -31,13 +28,13 @@ export default (): React.ReactNode => {
           }}
         />
         <Typography.Text strong>
-          <FormattedMessage id="pages.welcome.advancedComponent" defaultMessage="Advanced Form" />{' '}
+          <span>高级表格 </span>
           <a
             href="https://procomponents.ant.design/components/table"
             rel="noopener noreferrer"
             target="__blank"
           >
-            <FormattedMessage id="pages.welcome.link" defaultMessage="Welcome" />
+            欢迎使用
           </a>
         </Typography.Text>
         <CodePreview>yarn add @ant-design/pro-table</CodePreview>
