@@ -1,7 +1,7 @@
 {
     "apps": [{
-        "name": "webserver",
-        "script": "/webserver.js",
+        "name": "scampering_apiserver",
+        "script": "/home/node_server/scampering_apiserver/apiserver.js",
         "watch": true,
         "ignore_watch": [
             "node_modules",
@@ -13,4 +13,5 @@
         "error_file": "./logs/pm2-err.log",
         "log_date_format": "YYYY-MM-DD HH:mm:ss Z"
     }]
+
 }

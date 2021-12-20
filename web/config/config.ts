@@ -8,6 +8,7 @@ import routes from './routes';
 
 const { REACT_APP_ENV } = process.env;
 
+
 export default defineConfig({
   hash: true,
   antd: {},
@@ -33,6 +34,21 @@ export default defineConfig({
   },
   targets: {
     ie: 11,
+  },
+  chainWebpack(config, { env, webpack, createCSSRule }) {
+    // 修改js，js chunk文件输出目录
+    config.output
+      .filename('js/[name].[hash:8].js')
+      .chunkFilename('js/[name].[contenthash:8].chunk.js')
+    // 修改css输出目录
+    config.plugin("extract-css").tap(() => [
+      {
+        filename: 'css/[name].[contenthash:8].css',
+        chunkFilename: 'css/[name].[contenthash:8].chunk.css',
+        ignoreOrder: true,
+      },
+    ]);
+
   },
   // umi routes: https://umijs.org/docs/routing
   routes,

@@ -22,38 +22,20 @@ let wnoteRouter = require('./routes/weapp/wnote');
 
 let app = express();
 let http = require('http');
-let https = require('https');
-let privateKey = fs.readFileSync(path.join(__dirname, './certificate/private.pem'), 'utf8');
-let certificate = fs.readFileSync(path.join(__dirname, './certificate/file.crt'), 'utf8');
-let credentials = {
-    key: privateKey,
-    cert: certificate
-};
 
 // 启动数据库连接池
 // createOraclePool();
 
 let httpServer = http.createServer(app)
-let httpsServer = https.createServer(credentials, app);
+
 
 httpServer.listen(config.port, () => {
     log.info('http服务端口号 : ' + config.port);
 });
 
-//创建https服务器  
-httpsServer.listen(config.sslport, () => {
-    log.info('https服务端口号 : ' + config.sslport);
-});
 
 
-// 将所有的http请求自动重定向到https
-// app.get('*', function(req, res, next) {
-//     if (req.protocol != 'https') {
-//         // log.info(`https://${req.headers.host.split(':')[0]}:${sslport}${req.url}`)
-//         res.redirect(`https://${req.headers.host.split(':')[0]}:${sslport}${req.url}`)
-//     } else
-//         next() /* Continue to other routes if we're not redirecting */
-// })
+
 
 //使服务可被跨域请求
 let allowCrossDomain = function(req, res, next) {
@@ -82,6 +64,8 @@ app.use(express.urlencoded({
 app.use('/dist', express.static(path.join(__dirname, 'dist')));
 app.use('/utf8-php', express.static(path.join(__dirname, 'dist/utf8-php')));
 app.use('/static', express.static(path.join(__dirname, 'dist/static')));
+app.use('/css', express.static(path.join(__dirname, 'dist/css')));
+app.use('/js', express.static(path.join(__dirname, 'dist/js')));
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 
 // 使用身份认证中间件
