@@ -9,6 +9,10 @@ const routes = [{
     component: () =>
         import ("@/views/computeAF"),
 }, {
+    path: "/computeLevel",
+    component: () =>
+        import ("@/views/computeLevel"),
+}, {
     path: "/host",
     component: () =>
         import ("@/views/host"),
