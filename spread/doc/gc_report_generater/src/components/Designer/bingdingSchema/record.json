@@ -1,0 +1,75 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "properties": {
+        "检测单位": {
+            "dataFieldType": "text",
+            "type": "string"
+        },
+        "检测单名称": {
+            "dataFieldType": "text",
+            "type": "string"
+        },
+        "记录编号": {
+            "dataFieldType": "text",
+            "type": "string"
+        },
+        "委托编号": {
+            "dataFieldType": "text",
+            "type": "string"
+        },
+        "样品名称": {
+            "dataFieldType": "text",
+            "type": "string"
+        },
+        "检测日期": {
+            "dataFieldType": "text",
+            "type": "string"
+        },
+        "器具名称": {
+            "dataFieldType": "text",
+            "type": "string"
+        },
+        "检测方法": {
+            "dataFieldType": "text",
+            "type": "string"
+        },
+        "实验温度": {
+            "dataFieldType": "text",
+            "type": "string"
+        },
+        "实验相对湿度": {
+            "dataFieldType": "text",
+            "type": "string"
+        },
+        "检定员": {
+            "dataFieldType": "text",
+            "type": "string"
+        },
+        "实验记录": {
+            "dataFieldType": "table",
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "编号": {
+                        "dataFieldType": "text",
+                        "type": "string"
+                    },
+                    "压力值": {
+                        "dataFieldType": "text",
+                        "type": "string"
+                    },
+                    "检测值": {
+                        "dataFieldType": "text",
+                        "type": "string"
+                    },
+                    "结果": {
+                        "dataFieldType": "text",
+                        "type": "string"
+                    }
+                }
+            }
+        }
+    },
+    "type": "object"
+}

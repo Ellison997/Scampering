@@ -1,0 +1,89 @@
+.ribbon-button-fontIcon {
+    background-size: 32px 32px;
+    background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pg0KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE2LjAuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPg0KPCFET0NUWVBFIHN2ZyBQVUJMSUMgIi0vL1czQy8vRFREIFNWRyAxLjEvL0VOIiAiaHR0cDovL3d3dy53My5vcmcvR3JhcGhpY3MvU1ZHLzEuMS9EVEQvc3ZnMTEuZHRkIj4NCjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiIHk9IjBweCINCgkgd2lkdGg9Ijk0LjUwMXB4IiBoZWlnaHQ9Ijk0LjUwMXB4IiB2aWV3Qm94PSIwIDAgOTQuNTAxIDk0LjUwMSIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgOTQuNTAxIDk0LjUwMTsiDQoJIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPGc+DQoJPHBhdGggZD0iTTM0LjA3LDc4Ljg5MmwtMi42MjMtMi4xNTVjLTMuMDY0LTIuNTEzLTEzLjA1Ni0xMS45NzgtMTMuMDU2LTI4LjI5NmMwLTE3LjkzMiwxMS44MTgtMjkuNTIsMzAuMTEyLTI5LjUyDQoJCWMxNy44MzksMCwyOC45MjIsMTAuOTQ4LDI4LjkyMiwyOC41NzNjMCwxNi40NzEtOS4yNDgsMjUuOTY1LTEzLjIyNiwyOS4yODRsLTIuNTcxLDIuMTQ5djExLjAxNGgzMi44NzNWNzUuNTgySDgzLjkzNg0KCQljNS4yMDktOC4zNjUsNy44NDgtMTcuNzk5LDcuODQ4LTI4LjA4OGMwLTI1LjY4LTE3LjM5My00Mi45MzQtNDMuMjc5LTQyLjkzNEMyMi4zMjUsNC41NjEsNC4wNDEsMjIuNjA2LDQuMDQxLDQ4LjQ0DQoJCWMwLDkuNTIxLDIuNzA1LDE5LjA1Miw3LjY2MywyNy4xNDJIMHYxNC4zNTloMzQuMDcxTDM0LjA3LDc4Ljg5MkwzNC4wNyw3OC44OTJ6Ii8+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8L3N2Zz4NCg==);
+}
+
+.fontIcon-Batman {
+    font: 28px "Dexter Batman";
+    text-align: center;
+}
+
+.fontIcon-Batman-E900::before {
+    content: "\E900";
+}
+
+.fontIcon-Batman-E901::before {
+    content: "\E901";
+}
+
+.fontIcon-Batman-E902::before {
+    content: "\E902";
+}
+
+.fontIcon-Batman-E903::before {
+    content: "\E903";
+}
+
+
+.fontIcon-SJQY {
+    font: 28px "SJQY";
+    text-align: center;
+}
+
+.fontIcon-SJQY-0041::before {
+    content: "\0041";
+}
+
+.fontIcon-SJQY-0042::before {
+    content: "\0042";
+}
+
+.fontIcon-SJQY-0043::before {
+    content: "\0043";
+}
+
+.fontIcon-SJQY-0044::before {
+    content: "\0044";
+}
+
+.fontIcon-SJQY-0045::before {
+    content: "\0045";
+}
+
+
+
+
+
+
+.fontIcon-icomoon {
+    font: 28px "icomoon";
+    text-align: center;
+}
+
+.fontIcon-icomoon-E900::before {
+    content: "\E900";
+}
+
+.fontIcon-icomoon-E901::before {
+    content: "\E901";
+}
+
+.fontIcon-icomoon-E902::before {
+    content: "\E902";
+}
+
+.fontIcon-icomoon-E903::before {
+    content: "\E903";
+}
+.fontIcon-icomoon-E904::before {
+    content: "\E904";
+}
+.fontIcon-icomoon-E905::before {
+    content: "\E905";
+}
+.fontIcon-icomoon-E906::before {
+    content: "\E906";
+}
+.fontIcon-icomoon-E907::before {
+    content: "\E907";
+}
